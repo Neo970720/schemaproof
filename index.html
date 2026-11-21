@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SchemaProof — Structured Data Inspector for Edge and Firefox</title>
+<meta name="description" content="Validate JSON-LD, microdata and rich results on any page. Audit a site, export a fix plan. No account, no tracking. Free browser extension for Microsoft Edge and Mozilla Firefox.">
+<style>
+  :root { --ink:#0b1524; --muted:#5b6b80; --line:#e3e8ef; --brand:#0f766e; --brand-dark:#0b5c55; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#f7f9fc; color:var(--ink); font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", Arial, sans-serif; }
+  header { border-bottom:1px solid var(--line); background:#fff; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .bar { display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:-.01em; }
+  .brand img { width:28px; height:28px; border-radius:7px; }
+  .bar nav a { color:var(--muted); text-decoration:none; margin-left:20px; font-size:14px; }
+  .bar nav a:hover { color:var(--ink); }
+  main { max-width: 960px; margin: 0 auto; padding: 56px 24px 72px; }
+  .hero { display:grid; grid-template-columns: 1.35fr 1fr; gap:40px; align-items:center; }
+  h1 { font-size: 40px; line-height:1.15; letter-spacing:-.02em; margin:0 0 14px; }
+  .lede { font-size: 18px; color:#26364b; margin: 0 0 22px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; }
+  .btn { display:inline-block; padding: 11px 20px; border-radius:10px; text-decoration:none; font-weight:600; font-size:15px; border:1px solid var(--line); background:#fff; color:var(--ink); }
+  .btn.primary { background:var(--brand); border-color:var(--brand); color:#fff; }
+  .btn.primary:hover { background:var(--brand-dark); }
+  .note { color:var(--muted); font-size:13px; margin-top:14px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px; box-shadow:0 1px 2px rgba(11,21,36,.04); }
+  .card h3 { margin:0 0 10px; font-size:15px; }
+  .card ul { margin:0; padding-left:18px; font-size:14px; color:#26364b; }
+  .card li { margin:4px 0; }
+  section { margin-top: 64px; }
+  h2 { font-size: 24px; letter-spacing:-.01em; margin: 0 0 8px; }
+  .sub { color:var(--muted); margin: 0 0 22px; font-size:15px; }
+  .grid3 { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+  .num { font-size:12px; font-weight:700; color:var(--brand); letter-spacing:.08em; }
+  .grid3 h3 { font-size:16px; margin:6px 0 6px; }
+  .grid3 p { margin:0; font-size:14px; color:#3b4a5f; }
+  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+  th, td { text-align:left; padding:12px 16px; border-bottom:1px solid var(--line); font-size:14px; vertical-align:top; }
+  th { font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); background:#fbfcfe; }
+  tr:last-child td { border-bottom:none; }
+  code { font-family: ui-monospace, Menlo, monospace; background:#f1f4f9; padding:1px 5px; border-radius:5px; font-size:13px; }
+  .faq p { margin: 0 0 14px; }
+  .faq strong { display:block; margin-bottom:2px; }
+  a { color:#2f3ea8; }
+  footer { border-top:1px solid var(--line); background:#fff; margin-top: 24px; }
+  footer .wrap { padding: 26px 24px 34px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; gap:28px; }
+    .grid3 { grid-template-columns: 1fr; }
+    h1 { font-size: 30px; }
+    .bar nav a { margin-left:14px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="brand">
+      <img src="icon-128.png" alt="" width="28" height="28">
+      SchemaProof
+    </div>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#pro">Pro</a>
+      <a href="#install">Install</a>
+      <a href="privacy-policy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div>
+      <h1>See exactly why a page is not getting rich results.</h1>
+      <p class="lede">SchemaProof checks the page you are on against Google’s published structured-data rules and shows every problem with its property path, what is wrong and how to fix it. Everything runs in your browser — no account, no upload, no tracking.</p>
+      <div class="cta">
+        <a class="btn primary" href="#install">Get the extension</a>
+        <a class="btn" href="https://sheetwrightstudio.gumroad.com/l/schemaproof" rel="noopener">Pro — $19 once</a>
+      </div>
+      <p class="note">Free edition for Microsoft Edge and Mozilla Firefox. Pro is a one-time licence, no subscription.</p>
+    </div>
+    <div class="card">
+      <h3>What a scan gives you</h3>
+      <ul>
+        <li>Every JSON-LD block, microdata item and RDFa item on the page</li>
+        <li>Rich-result checks for 20+ schema types</li>
+        <li>schema.org vocabulary: unknown types, properties, misspellings</li>
+        <li>Value checks: dates, currencies, prices, ratings, URLs</li>
+        <li>Findings as text or CSV, with the exact property path</li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="how">
+    <h2>Three things it does</h2>
+    <p class="sub">The markup is what search engines read. One missing price or one broken quote makes the rich result disappear silently.</p>
+    <div class="grid3">
+      <div>
+        <div class="num">01 — SCAN</div>
+        <h3>One-page scan</h3>
+        <p>Press the toolbar button. The page is read locally, parsed for JSON-LD, microdata and RDFa, and checked against Google’s rich-result requirements and the current schema.org vocabulary.</p>
+      </div>
+      <div>
+        <div class="num">02 — AUDIT</div>
+        <h3>Site audit</h3>
+        <p>Paste up to 200 URLs or point it at <code>sitemap.xml</code>. Each page is fetched once, without cookies, directly from your browser and checked with the same rules.</p>
+      </div>
+      <div>
+        <div class="num">03 — BUILD</div>
+        <h3>JSON-LD builder</h3>
+        <p>12 guided templates — Product, Article, LocalBusiness, Event, Recipe, FAQ, Breadcrumb, Video, Job, Course, Software, Organization — validated live while you type.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pro">
+    <h2>Free and Pro</h2>
+    <p class="sub">One $19 licence unlocks Pro on Edge and Firefox, on every computer you use. No subscription, no account.</p>
+    <table>
+      <thead><tr><th>Feature</th><th>Free</th><th>Pro ($19 once)</th></tr></thead>
+      <tbody>
+        <tr><td>One-click scan, 20+ rich-result types, vocabulary and value checks</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Text and CSV export of a single scan</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Site audit from a URL list or <code>sitemap.xml</code></td><td>3 pages</td><td>200 pages</td></tr>
+        <tr><td>Client-ready HTML report (print to PDF)</td><td>—</td><td>Yes</td></tr>
+        <tr><td>JSON-LD builder with live validation</td><td>—</td><td>Yes</td></tr>
+        <tr><td>Audit CSV export</td><td>—</td><td>Yes</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="install">
+    <h2>Install</h2>
+    <p class="sub">SchemaProof is published in the Microsoft Edge Add-ons store and on Mozilla Add-ons (AMO). Both listings are free.</p>
+    <div class="cta">
+      <a class="btn" id="link-edge" href="#" rel="noopener">Microsoft Edge Add-ons</a>
+      <a class="btn" id="link-firefox" href="#" rel="noopener">Mozilla Add-ons (Firefox)</a>
+    </div>
+    <p class="note">Store links appear here once each listing is approved. The licence key is checked with Gumroad only when you press “Verify key” — that is the only network request the extension makes.</p>
+  </section>
+
+  <section class="faq">
+    <h2>Privacy, in short</h2>
+    <p class="sub">The full policy is at <a href="privacy-policy.html">privacy-policy.html</a>.</p>
+    <p><strong>Page content never leaves your device.</strong> The page is read only after you click the toolbar button, and the HTML is parsed in the extension itself.</p>
+    <p><strong>No analytics and no profile.</strong> No telemetry, no crash reporting, no advertising identifiers, no browsing history.</p>
+    <p><strong>The one network call.</strong> If you enter a Pro licence key, the key and the product id go to Gumroad’s licence API to check it. Nothing about the page or the browser is included.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>SchemaProof is published by Neo (네오), a sole proprietorship registered in the Republic of Korea.</span>
+    <span><a href="privacy-policy.html">Privacy policy</a> · <a href="mailto:thready.ceo@gmail.com">thready.ceo@gmail.com</a></span>
+  </div>
+</footer>
+
+<script>
+  // Store links are filled in when each listing goes live. Until then the buttons
+  // stay quiet rather than pointing at a page that does not exist.
+  (function () {
+    var links = {
+      'link-edge': '',
+      'link-firefox': ''
+    };
+    Object.keys(links).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!links[id]) {
+        el.removeAttribute('href');
+        el.style.opacity = '0.55';
+        el.style.cursor = 'default';
+        el.title = 'Listing under review';
+      } else {
+        el.href = links[id];
+      }
+    });
+  })();
+</script>
+</body>
+</html>

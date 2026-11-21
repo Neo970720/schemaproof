@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SchemaProof — Privacy Policy</title>
+<style>
+  :root { --ink:#0b1524; --muted:#5b6b80; --line:#e3e8ef; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#f7f9fc; color:var(--ink); font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", Arial, sans-serif; }
+  main { max-width: 760px; margin: 40px auto 80px; background:#fff; border:1px solid var(--line); border-radius:16px; padding: 38px 42px 50px; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 30px 0 8px; }
+  .meta { color: var(--muted); font-size: 13px; }
+  .lede { border-left: 3px solid #0f766e; padding-left: 14px; margin: 22px 0; color:#26364b; }
+  table { width:100%; border-collapse: collapse; margin: 10px 0 4px; }
+  th, td { text-align:left; padding: 8px 10px; border-bottom: 1px solid var(--line); font-size: 14px; vertical-align: top; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  code { font-family: ui-monospace, Menlo, monospace; background:#f1f4f9; padding:1px 5px; border-radius:5px; font-size:13px; }
+  footer { margin-top: 36px; border-top: 1px solid var(--line); padding-top: 14px; color: var(--muted); font-size: 13px; }
+  a { color: #2f3ea8; }
+</style>
+</head>
+<body>
+<main>
+  <h1>SchemaProof — Privacy Policy</h1>
+  <div class="meta">Effective 21 November 2026 · Applies to the SchemaProof browser extension for Microsoft Edge and Mozilla Firefox</div>
+
+  <p class="lede">SchemaProof reads the web page you are on inside your own browser and keeps the result on your device. It does not collect analytics, does not build a profile, and never sends page content, URLs, or browsing history anywhere.</p>
+
+  <h2>1. What the extension processes</h2>
+  <table>
+    <thead><tr><th>Data</th><th>Where it stays</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>The HTML of the page you scan</td><td>Your browser only</td><td>To find and check structured data (JSON-LD, microdata, RDFa). It is never uploaded.</td></tr>
+      <tr><td>Pages you add to a site audit</td><td>Your browser only</td><td>Each page is fetched once, without cookies, directly from your browser to that website.</td></tr>
+      <tr><td>Scan results, reports</td><td>Your device (downloads / extension storage)</td><td>So you can open, keep or delete them yourself.</td></tr>
+      <tr><td>Licence key</td><td>Your device, and Gumroad (only when you press “Verify key”)</td><td>To confirm a Pro purchase.</td></tr>
+      <tr><td>Settings (e.g. licence check time)</td><td>Your device</td><td>To remember your preferences between sessions.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. The only network request</h2>
+  <p>If you enter a Pro licence key, the extension sends that key and the product identifier to Gumroad’s public licence API (<code>https://api.gumroad.com/v2/licenses/verify</code>) to check it. Nothing else is included — no page content, no URL, no identifier about you or your browser. The reply is stored locally for 30 days, with a 7-day offline grace period, so the add-on works without a connection.</p>
+  <p>Gumroad processes that request under its own privacy policy: <a href="https://gumroad.com/privacy" rel="noopener">gumroad.com/privacy</a>. If you never enter a key, the extension makes no network requests at all.</p>
+
+  <h2>3. Site audits</h2>
+  <p>An audit fetches the addresses you type, from your browser, the way a crawler would. Those websites will see a request from your IP address, without cookies and without a referrer. Nothing about the pages, the results or the report is sent to the developer or to any third party.</p>
+
+  <h2>4. What is never collected</h2>
+  <ul>
+    <li>No analytics, telemetry, crash reporting or advertising identifiers.</li>
+    <li>No browsing history, no reading of pages you did not scan.</li>
+    <li>No accounts, names, email addresses or payment details (payments happen on Gumroad, not in the extension).</li>
+    <li>No sale or sharing of any data with third parties.</li>
+  </ul>
+
+  <h2>5. Permissions, and why each exists</h2>
+  <ul>
+    <li><strong>activeTab</strong> — read the current page, only after you click the toolbar button.</li>
+    <li><strong>scripting</strong> — return that page’s HTML to the extension for parsing.</li>
+    <li><strong>storage</strong> — keep the licence key, settings and the address of the last scan on your device.</li>
+    <li><strong>api.gumroad.com</strong> — the licence check described above.</li>
+    <li><strong>optional site access</strong> — requested only when you start a site audit, for the sites you entered. If you decline, the one-page scan keeps working.</li>
+  </ul>
+
+  <h2>6. Retention and deletion</h2>
+  <p>Scan results live in your browser’s extension storage and in files you exported. Removing the extension deletes its storage; exported files stay wherever you saved them. To remove the licence from this browser, open the extension and press “Remove” next to your key. To have a licence record deleted at the vendor, contact support with your Gumroad receipt.</p>
+
+  <h2>7. Children</h2>
+  <p>The extension is a developer tool and is not directed to children under 13.</p>
+
+  <h2>8. Changes</h2>
+  <p>If this policy changes, the effective date above changes and the new version is published at this address. Material changes will be noted in the extension’s release notes.</p>
+
+  <h2>9. Contact</h2>
+  <p>Questions about this policy or a data request: <a href="mailto:thready.ceo@gmail.com">thready.ceo@gmail.com</a>.</p>
+
+  <footer>SchemaProof is published by Neo (네오), a sole proprietorship registered in the Republic of Korea. This page is self-contained and can be hosted on any static host.</footer>
+</main>
+</body>
+</html>
